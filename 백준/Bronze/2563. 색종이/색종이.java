@@ -38,14 +38,5 @@ public class Main {
 		System.out.println(width);
 //		bw.close();
 	}
-	/*
-	 * 
-	 * 뒤에서 하나 빼서 stack에 넣는다. index = N
-	 * 뒤에서 하나 더 뺀다. stack의 꼭대기 값과 비교한다.  index = N-1 
-	 *  N-1이 크면 N인덱스에 N-1을 넣는다.
-	 *  반대로 N-1이 작으면 stack에 그대로 넣는다.
-	 * 
-	 *  
-	 * 
-	 * */
+
 }
