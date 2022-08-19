@@ -135,58 +135,6 @@ public class Main {
 		}
 		
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-//		
-//		for(int a=0;a<3;a++) {
-//			int r = archer[a][0];
-//			int c = archer[a][1];
-//			int minDistance = Integer.MAX_VALUE;
-//			
-//			for(int i=N-1;i>=0;i--) {//아래 줄 부터 시작
-//				for(int j=0;j<M;j++) { // 왼쪽 부터 시작
-//					if(area[i][j]==1) {
-//						int distance = Math.abs(i-r)+Math.abs(j-c);
-//						if(distance <= D && distance <minDistance) {
-//							minDistance=distance;
-//							attackLocation[a][0] = j;
-//							attackLocation[a][1] = i;
-//							meetEnemy[a] = true;
-//						}
-//						else if(distance <= D && distance == minDistance && attackLocation[a][0] < j) {
-//							attackLocation[a][0] = j;
-//							attackLocation[a][1] = i;
-//							meetEnemy[a] = true;
-//						}
-//					}
-//				}
-////				if(meetEnemy[a])//속도 때문에
-////					break;
-//			}
-////			System.out.println("r:"+r+" c:"+c);
-//			
-//		}
-//		
-//		for(int i=0;i<3;i++) {
-//			if(meetEnemy[i]) {
-//				count++;
-//			}
-//		}
-//		System.out.println(count);
-
 		for(int i=0;i<3;i++) {
 			if(meetEnemy[i]) {
 				area[attackLocation[i][0]][attackLocation[i][1]]=0;
