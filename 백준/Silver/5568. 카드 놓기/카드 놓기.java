@@ -4,10 +4,9 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class Main {
-
+    //https://www.acmicpc.net/problem/5568
     public static int n, k;
     public static int[] arr;
-
     public static Set<Integer> answer = new HashSet<>();
     public static boolean[] isSelect;
 
@@ -16,13 +15,15 @@ public class Main {
             answer.add(number);
             return;
         }
+
         for (int i = 0; i < n; i++) {
-            if (isSelect[i]) continue;
-            isSelect[i] = true;
-            String tmpNum = "" + arr[i];
-            int nextNum = number * (int) Math.pow(10, tmpNum.length()) + arr[i];
-            selectCard(count + 1, nextNum);
-            isSelect[i] = false;
+            if (!isSelect[i]) {
+                isSelect[i] = true;
+                String tmpNum = "" + arr[i];
+                int nextNum = number * (int) Math.pow(10, tmpNum.length()) + arr[i];
+                selectCard(count + 1, nextNum);
+                isSelect[i] = false;
+            }
         }
     }
 
@@ -39,7 +40,7 @@ public class Main {
             arr[i] = Integer.parseInt(br.readLine());
         }
 
-        selectCard(0,0);
+        selectCard(0, 0);
 
         System.out.println(answer.size());
     }
