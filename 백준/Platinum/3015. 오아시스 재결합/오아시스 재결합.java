@@ -6,11 +6,15 @@ import java.util.Stack;
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringBuilder sb = new StringBuilder();
         int N = Integer.parseInt(br.readLine());
         Stack<int[]> stack = new Stack<>();
         long count = 0;
 
-        for (int i = 0; i < N; i++) {
+        // 첫 번째 사람을 처리
+        stack.push(new int[]{Integer.parseInt(br.readLine()), 1});
+
+        for (int i = 1; i < N; i++) {
             int height = Integer.parseInt(br.readLine());
             int sameHeightCount = 1;
 
@@ -33,6 +37,7 @@ public class Main {
             stack.push(new int[]{height, sameHeightCount});
         }
 
+        // 결과 출력
         System.out.println(count);
     }
 }
